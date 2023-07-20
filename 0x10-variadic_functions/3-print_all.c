@@ -6,15 +6,13 @@
 * print_all - prints anything
 * @format: list of types of arguments passed to the function
 */
+
 void print_all(const char * const format, ...)
 {
 int j = 0;
 char *str, *sep = "";
-
 va_list list;
-
 va_start(list, format);
-
 if (format)
 {
 while (format[j])
@@ -44,7 +42,6 @@ sep = ", ";
 j++;
 }
 }
-
 printf("\n");
 va_end(list);
 }
